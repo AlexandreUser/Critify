@@ -1,10 +1,13 @@
-const {insertMovie,returnMovies} = require("../constructor/movies.constructor")
+const {insertMovie,returnMovies,findMovie} = require("../constructor/movies.constructor")
 module.exports = {
-    async get(req,res){
+    async movieFinder(req,res){
+        findMovie(req.params.id,res)
+    },
+    async listMovies(req,res){
         
         returnMovies(res)
     },
-    async post(req,res){
+    async createMovie(req,res){
         let objectMovie = {
             movieId:await returnMovies(),
             name: req.body.movieName,

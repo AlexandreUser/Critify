@@ -1,5 +1,18 @@
 const {movie} = require("../model/movies.model")
 module.exports = {
+    async findMovie(id,res){
+        movie.findOne({movieId:id},function(err,result){
+            if(err){
+                res.send(err);
+                return;
+            }
+            if(result){
+                res.send(result);
+                return;
+            }
+            res.send({error:"not found"})
+        })
+    },
     async insertMovie(objectMovie){
         movie.create(objectMovie,function(err,result){
             if(!err){
