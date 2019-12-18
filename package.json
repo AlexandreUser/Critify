@@ -1,0 +1,25 @@
+{
+  "name": "critify",
+  "version": "0.0.1",
+  "description": "a simple api/gui for making movie critics and a simple recomendation system",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon ./src/index.js"
+  },
+  "keywords": [
+    "python3",
+    "node",
+    "express",
+    "numpy",
+    "nltk",
+    "tensorflow"
+  ],
+  "author": "Alexandre",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.1",
+    "nodemon": "^2.0.2"
+  }
+}
