@@ -6,6 +6,7 @@ mongoose.connect("mongodb://localhost:27017/movies",{
 
 var Schema = mongoose.Schema;
 var movieSchema = new Schema({
+    movieId:Number,
     name:String,
     description:String,
     rank:Number,

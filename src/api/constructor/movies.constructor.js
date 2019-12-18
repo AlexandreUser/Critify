@@ -10,9 +10,14 @@ module.exports = {
             }
         })
     },
-    returnMovies(res){
-        movie.find({},function(err,result){
-            res.send(result)
-        })
+    async returnMovies(res=null){
+        if(res){
+            movie.find({},function(err,result){
+                res.send(result)
+            }) 
+        }
+        else{
+            return await movie.estimatedDocumentCount({}) 
+        }
     }
 }
