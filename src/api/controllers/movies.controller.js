@@ -13,7 +13,10 @@ module.exports = {
             name: req.body.movieName,
             description: req.body.description,
             rank: req.body.rank,
-            tags: req.body.tags
+            tags: req.body.tags,
+            duration: req.body.duration,
+            year:req.body.year,
+            image:req.body.image
         }
         insertMovie(objectMovie)
         res.status(200).send({result:"sucess"})

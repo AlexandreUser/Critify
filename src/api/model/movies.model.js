@@ -10,7 +10,10 @@ var movieSchema = new Schema({
     name:String,
     description:String,
     rank:Number,
-    tags:[String]
+    tags:[String],
+    duration:String,
+    year:Number,
+    image:String
 })
 
 exports.movie = mongoose.model("moviesData",movieSchema)
